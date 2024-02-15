@@ -7,7 +7,7 @@ import {
 } from "react";
 import PropTypes from "prop-types";
 import { getTask } from "@services";
-import { taskGroupBy } from "../utils";
+import { taskGroupBy, taskOrderBy } from "../utils";
 
 export const TaskContext = createContext();
 
@@ -32,8 +32,8 @@ export const TaskProvider = ({ children }) => {
     if (savedOptions) return JSON.parse(savedOptions);
 
     return {
-      grouping: "none",
-      ordering: "none",
+      grouping: "priority",
+      ordering: "title",
     };
   });
   const [loading, setLoading] = useState(false);
@@ -76,12 +76,16 @@ export const TaskProvider = ({ children }) => {
 
     const { data } = tasks;
 
-    const groupedTasks = taskGroupBy(data, options.grouping);
+    let groupedTasks = taskGroupBy(data, options.grouping);
 
-    // const orderedTasks = taskOrderBy(data.tickets, options.ordering);
-    // console.log("orderedTasks", orderedTasks);
+    console.log(groupedTasks, options.ordering, options.grouping);
 
-    // setTasks(orderedTasks);
+    if (options.ordering)
+      groupedTasks = Object.keys(groupedTasks).reduce((result, key) => {
+        result[key] = taskOrderBy(groupedTasks[key], options.ordering);
+        return result;
+      }, {});
+
     setGroupedTasks(groupedTasks);
   }, [tasks, options.grouping, options.ordering]);
 

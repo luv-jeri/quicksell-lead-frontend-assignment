@@ -22,7 +22,7 @@ html {
   --text-secondary-light: #666;
   --text-secondary-light: #999;
 }
-
+ 
 /* Light Mode */
 [data-theme="light"] {
   --bg-color: var(--bg-color-light);
@@ -39,7 +39,7 @@ html {
   --bg-color: var(--bg-color-dark);
   --text-color: var(--text-color-dark);
   --shadow-color: #000000;
-  --border-color: var(-border-color-dark);
+  --border-color: var(--border-color-dark);
   --hover-color: #4f4f4f;
   --page-background: var(--page-background-dark);
   --text-secondary: #999;

@@ -4,11 +4,9 @@ import { Board, Spacer } from "@components";
 export const Home = () => {
   const { groupedTasks } = useTask();
 
-  console.log("Home", groupedTasks);
-
   return (
     <div className={s.wrapper}>
-      <Spacer /> {groupedTasks && <Board groupedTasks={groupedTasks} />}
+      <Spacer direction="V" amount="m" /> {groupedTasks && <Board groupedTasks={groupedTasks} />}
     </div>
   );
 };

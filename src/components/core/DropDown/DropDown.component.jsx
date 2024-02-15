@@ -1,11 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 import styles from "./DownDown.module.css";
 import PropTypes from "prop-types";
+import { Icon } from "@components";
 
 export const DropDown = ({ options, onSelect, selected }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(() => {
-    return options.find((option) => option.value === selected) || null;
+    return options.find((option) => option.value === selected) || options[0];
   });
   const dropdownRef = useRef(null);
 
@@ -36,18 +37,29 @@ export const DropDown = ({ options, onSelect, selected }) => {
   return (
     <div className={styles["dropdown"]} ref={dropdownRef}>
       <div className={styles["selected-option"]} onClick={toggleDropdown}>
-        {selectedOption ? selectedOption.label : "Select an option"}
+        {selectedOption ? selectedOption.label : "Select an option"}{" "}
+        <Icon
+          name="arrow"
+          style={{
+            transform: isOpen
+              ? "rotate(270deg)"
+              : "rotate(90deg)" + " translateX(-0.1rem)",
+            transition : "transform 0.3s ease",
+          }}
+        />
       </div>
       {isOpen && (
         <div className={styles.options}>
           {options.map((option) => (
-            <div
-              key={option.value}
-              className={styles.option}
-              onClick={() => handleOptionClick(option)}
-            >
-              {option.label}
-            </div>
+            <>
+              <div
+                key={option.value}
+                className={styles.option}
+                onClick={() => handleOptionClick(option)}
+              >
+                {option.label}
+              </div>
+            </>
           ))}
         </div>
       )}

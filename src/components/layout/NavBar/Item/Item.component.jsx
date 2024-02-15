@@ -1,6 +1,6 @@
 import s from "./Item.module.css";
 import PropTypes from "prop-types";
-import { DropDown } from "@components";
+import { DropDown  } from "@components";
 import { useCallback } from "react";
 
 export const Item = ({ title, list, key, selected, handleOptionClick }) => {

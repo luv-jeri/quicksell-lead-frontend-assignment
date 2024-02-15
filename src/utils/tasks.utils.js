@@ -56,15 +56,18 @@ export const taskGroupBy = memoize((data, groupBy) => {
         : null,
       status: ticket.status,
       priority: replacePriority(ticket.priority),
+      priority_number: ticket.priority,
     });
     return result;
   }, {});
 });
 
-export const taskOrderBy = (data, key) => {
-  return data.sort((a, b) => {
-    if (a[key] < b[key]) return -1;
-    if (a[key] > b[key]) return 1;
-    return 0;
-  });
+export const taskOrderBy = (ticketData, orderBy) => {
+  if (orderBy === "priority") {
+    return ticketData.sort((a, b) => b.priority_number - a.priority_number);
+  } else if (orderBy === "title") {
+    return ticketData.sort((a, b) => a.title.localeCompare(b.title));
+  } else {
+    return ticketData;
+  }
 };

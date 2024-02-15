@@ -40,3 +40,9 @@ Spacer.propTypes = {
   amount: PropTypes.oneOf(["xs", "s", "m", "l", "lg", "xl"]).isRequired,
   styles: PropTypes.object,
 };
+
+Spacer.defaultProps = {
+  direction: "V",
+  amount: "m",
+  styles: {},
+};

@@ -3,6 +3,7 @@ import { BoardColumn } from "./BoardColumn/BoardColumn.component";
 import s from "./Board.module.css";
 import PropTypes from "prop-types";
 
+
 const userPropTypes = PropTypes.shape({
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
@@ -26,11 +27,16 @@ const groupedTasksPropTypes = PropTypes.objectOf(
 );
 
 export const Board = ({ groupedTasks }) => {
-  console.log("Board", groupedTasks);
+
   return (
     <div className={s.wrapper}>
       {Object.entries(groupedTasks).map(([title, tickets]) => (
-        <BoardColumn key={title} title={title} tickets={tickets} />
+        <BoardColumn
+          key={title}
+          title={title}
+          tickets={tickets}
+         
+        />
       ))}
     </div>
   );

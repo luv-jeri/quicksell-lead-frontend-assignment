@@ -1,8 +1,59 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## QuickShell Frontend Assignment
 
-Currently, two official plugins are available:
+### Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Install all dependencies using either Yarn or npm:
+   ```sh
+   yarn install
+   ```
+   or
+   ```sh
+   npm install
+   ```
+
+2. Run the project in development mode:
+   ```sh
+   yarn dev
+   ```
+   or
+   ```sh
+   npm run dev
+   ```
+
+### Production Mode
+
+1. Build the project:
+   ```sh
+   yarn build
+   ```
+   or
+   ```sh
+   npm run build
+   ```
+
+2. Start the project in production mode:
+   ```sh
+   yarn start
+   ```
+
+### Bundler
+
+This project uses Vite as the bundler.
+
+### Libraries
+
+- **axios** (^1.6.7)
+- **react** (^18.2.0)
+- **react-dom** (^18.2.0)
+- **vite-plugin-svgr** (^4.2.0)
+
+### Possible Improvements
+  -  Many... completed this in one night.
+
+
+**Deployment on [www.test.com](http://www.test.com)**
+
+---
+
+**Note:** The README.md file has been updated for clarity and conciseness.

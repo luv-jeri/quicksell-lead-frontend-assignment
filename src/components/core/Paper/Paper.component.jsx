@@ -9,6 +9,7 @@ export const Paper = ({
   children = null,
   style = {},
   className = "",
+  ...rest
 }) => {
   return (
     <div
@@ -20,6 +21,7 @@ export const Paper = ({
         borderRadius: radius,
         ...style,
       }}
+      {...rest}
     >
       {children}
     </div>

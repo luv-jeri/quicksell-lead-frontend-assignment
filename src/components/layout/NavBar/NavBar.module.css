@@ -11,3 +11,12 @@
 .drop_down {
   padding: 1rem;
 }
+
+.drop_down_target {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1.2rem;
+  font-weight: 600;
+  width: 13rem;
+}
