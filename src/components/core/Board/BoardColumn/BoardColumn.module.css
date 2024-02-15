@@ -1,0 +1,37 @@
+.column {
+  height: 100%;
+  min-width: 20rem;
+}
+
+.column_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.2rem;
+}
+
+.left_column_title {
+  display: flex;
+  align-items: center;
+}
+
+.right_column_title {
+  display: flex;
+  align-items: center;
+}
+
+.column_title h3 {
+  color: var(--text-color);
+  font-weight: 600;
+  margin-inline: 1rem;
+}
+
+.column_title h4 {
+  color: var(--text-secondary);
+  font-weight: 600;
+  margin-inline: 1rem;
+}
+
+.tickets > div {
+  margin-top: 1rem;
+}

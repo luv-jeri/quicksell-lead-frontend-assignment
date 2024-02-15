@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Open Sans", sans-serif;
+}
+
+:root {
+  --bg-color-light: #fff;
+  --text-color-light: #333;
+  --bg-color-dark: #333;
+  --text-color-dark: #f4f4f4;
+  --accent-color: #40a2e3;
+  --border-color-light: #bdbdbd;
+  --border-color-dark: #393939;
+  --page-background-light: #f5f4f8;
+  --page-background-dark: #1e1e1e;
+  --text-secondary-light: #666;
+  --text-secondary-light: #999;
+}
+
+/* Light Mode */
+[data-theme="light"] {
+  --bg-color: var(--bg-color-light);
+  --text-color: var(--text-color-light);
+  --shadow-color: #d9d9d9;
+  --border-color: var(--border-color-light);
+  --hover-color: #f2f2f2;
+  --page-background: var(--page-background-light);
+  --text-secondary: var(--text-secondary-light);
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+  --bg-color: var(--bg-color-dark);
+  --text-color: var(--text-color-dark);
+  --shadow-color: #000000;
+  --border-color: var(-border-color-dark);
+  --hover-color: #4f4f4f;
+  --page-background: var(--page-background-dark);
+  --text-secondary: #999;
+}
+
+/* Global Styles */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}

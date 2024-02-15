@@ -1,0 +1,5 @@
+.wrapper {
+  background-color: var(--page-background);
+  padding: 0 8rem;
+  height: 100vh;
+}
