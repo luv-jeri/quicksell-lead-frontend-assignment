@@ -53,7 +53,7 @@ This project uses Vite as the bundler.
   - Many... completed this in one night.
 
 
-**Deployment on [www.test.com](https://quicksell-assignment-frontend.vercel.app/)**
+**Deployment on [vercel](https://quicksell-assignment-frontend.vercel.app/)**
 
 ---
 
