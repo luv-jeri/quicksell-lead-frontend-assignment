@@ -15,6 +15,7 @@ import { GROUPING_VALUES, ORDERING_VALUES } from "@constants";
 export const NavBar = () => {
   const { updateOption, options } = useTask();
   const { toggleTheme } = useTheme();
+  
   const handleOptionClick = useCallback((option) => {
     updateOption(option.key, option.value);
   }, []);
