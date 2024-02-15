@@ -49,7 +49,8 @@ This project uses Vite as the bundler.
 - **vite-plugin-svgr** (^4.2.0)
 
 ### Possible Improvements
-  -  Many... completed this in one night.
+  - Saving URL in env
+  - Many... completed this in one night.
 
 
 **Deployment on [www.test.com](http://www.test.com)**
